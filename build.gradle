@@ -1,0 +1,19 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'com.amazonaws', name: 'aws-java-sdk', version: '1.11.453'
+    compile group: 'com.amazonaws', name: 'aws-lambda-java-events', version:'2.2.4'
+    compile group: 'com.amazonaws', name: 'aws-lambda-java-core', version:'1.2.0'
+    compile group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.3.2'
+    compile group: 'org.junit.jupiter', name: 'junit-jupiter-params', version: '5.3.2'
+    compile group: 'org.junit.jupiter', name: 'junit-jupiter-engine', version: '5.3.2'
+}
+
+test {
+    useJUnitPlatform()
+}
